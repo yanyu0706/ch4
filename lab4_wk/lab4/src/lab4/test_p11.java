@@ -1,0 +1,59 @@
+package lab4;
+
+public class test_p11 {
+
+	public static void main(String[] args) {
+		
+		racingcar11 car11;
+		car11=new racingcar11();
+		
+		car11.setcar11(1234,20.5);
+		car11.setcourse11(5);
+		
+		car11.show();
+	}
+}
+
+
+class car11{
+	
+	protected int num;
+	protected double gas;
+	
+	public car11() {
+		num=0;
+		gas=0;
+		System.out.println("生產了車子");
+	}
+	
+	public void setcar11(int n,double g) {
+		num=n;
+		gas=g;
+		System.out.println("將車號設為"+num+"汽油量設為"+gas);
+	}
+	
+	public void show() {
+		System.out.println("車號是"+num);
+		System.out.println("汽油量是"+gas);
+	}
+}
+
+class racingcar11 extends car11{
+	
+	private int course;
+	public racingcar11(){
+		course=0;
+		System.out.println("生產了賽車");
+	}
+	public void setcourse11(int c) {
+		course=c;
+		System.out.println("將賽車編號設為"+course);
+	}
+	
+	public void show() {
+		System.out.println("賽車的車號是"+num);
+		System.out.println("汽油量是"+gas);
+		System.out.println("賽車編號是"+course);
+	}
+	
+}
